@@ -1,0 +1,15 @@
+/* Check color pallette here https://www.color-hex.com/color-palette/64811 
+	Hex	RGB
+#443355	(68,51,85)
+#333333	(51,51,51)
+#555555	(85,85,85)
+#999999	(153,153,153)
+#eeeedd	(238,238,221)
+*/
+
+#dice-face > img {
+    background-color: #999;
+    height: 128px;
+    width: 128px;
+    border-radius: 6px;
+}
