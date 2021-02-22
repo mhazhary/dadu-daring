@@ -1,8 +1,21 @@
+const dice = document.getElementById("dice-face");
+const menu = document.getElementById("menu");
+
 function rollDice() {
-    var diceNum = Math.floor(Math.random() * 6) + 1;
-    const x = document.getElementById("dice-face");
-    x.innerHTML = '<img src="assets/img/dice' + diceNum + '.svg" />';
-    console.log(x.innerHTML);
+    let diceNum = Math.floor(Math.random() * 6) + 1;
+    let diceFace = "bi-dice-" + diceNum;
+    dice.setAttribute("class", diceFace);
+    console.log(dice.getAttribute("class"));
 }
-// Roll when load the website
+
+function openNav() {
+    menu.style.width = "100%";
+}
+
+function closeNav() {
+    menu.style.width = "0%";
+}
+
 rollDice();
+dice.addEventListener("mousemove", rollDice);
+menu.addEventListener("click", closeNav);

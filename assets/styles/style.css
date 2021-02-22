@@ -6,10 +6,208 @@
 #999999	(153,153,153)
 #eeeedd	(238,238,221)
 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-#dice-face > img {
-    background-color: #999;
-    height: 128px;
-    width: 128px;
-    border-radius: 6px;
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eed;
+}
+
+.jumbotron {
+    font-size: 1.25rem;
+    line-height: 1rem;
+    padding: 1.25rem;
+    background-color: #443355;
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    width: 4rem;
+}
+
+#dice-face {
+    font-size: 10rem;
+    color: #443355;
+}
+
+button > i {
+    font-size: 2rem;
+}
+
+.generator {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #435;
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    padding: 0.5rem;
+}
+
+main > * {
+    margin: 0.5rem;
+}
+
+main > #content {
+    flex-basis: 70%;
+}
+
+main > #profil {
+    flex-basis: 30%;
+}
+
+a > i {
+    font-size: 3rem;
+}
+
+.container {
+    border: 2px solid #443355;
+    border-radius: 1rem;
+}
+
+.container-header {
+    color: white;
+    background-color: #443355;
+    border-radius: calc(1rem - 4px) calc(1rem - 4px) 0 0;
+    margin: 0;
+    padding: 1rem;
+}
+
+.container p,
+.container h2,
+.container h3 {
+    margin: 0;
+    padding: 1rem;
+}
+
+.profile figure {
+    text-align: center;
+}
+
+#social-link {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+#social-link h3,
+#social-link p {
+    padding: 0;
+}
+
+#social-link a {
+    display: inline-block;
+    color: #333;
+    margin: 0 5px;
+}
+
+.profile img {
+    max-width: 100%;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background-color: rgb(68, 51, 85); /* Purple fallback color */
+    background-color: rgba(68, 51, 85, 0.9); /* Purple w/opacity */
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+nav {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #999;
+}
+
+.overlay .nav-close,
+.nav-open {
+    color: #eed;
+    background-color: #443355;
+    border: 2px solid white;
+    border-radius: 1rem;
+    color: #eed;
+    top: 40px;
+    right: 40px;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.nav-close {
+    position: absolute;
+}
+
+.nav-open {
+    position: fixed;
+}
+
+.nav-open i::before,
+.nav-close i::before {
+    display: block;
+}
+
+@media screen and (max-height: 768px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    main {
+        flex-direction: column;
+    }
+    .overlay a {
+        font-size: 2.25rem;
+    }
+    .overlay .nav-close,
+    .nav-open {
+        font-size: 2.25rem;
+        top: 20px;
+        right: 20px;
+    }
 }

@@ -2,36 +2,160 @@
 <html>
     <head>
         <title>DaDar Dadu Daring</title>
-        <link rel="stylesheet" href="assets/styles/style.css" />
+        <link rel="stylesheet" href="./assets/styles/icons.css" />
+        <link rel="stylesheet" href="./assets/styles/wiggle.css" />
+        <link rel="stylesheet" href="./assets/styles/style.css" />
+        <link rel="icon" href="./assets/img/logo.svg" type="image/svg" sizes="32x132">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <header>
-            <h1>DaDar</h1>
-            <p>Bisa dibilang DaDar</p>
-            <nav>
-                <ul>
-                    <li><a href="#sejarah">Sejarah</a></li>
-                    <li><a href="#geografis">Geografis</a></li>
-                    <li><a href="#wisata">Wisata</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="generator">
-                <div id="dice-face">
-                    <img src="assets/img/dice1.svg" />
+            <div class="jumbotron">
+                <h1>
+                    <img class="logo wiggle" src="./assets/img/logo.svg" />DaDar
+                </h1>
+                <p>Bisa dibilang Dadu Daring</p>
+            </div>
+            <div id="menu-button" class="nav-open" onclick="openNav()">
+                <i class="bi-list"></i>
+            </div>
+            <div id="menu" class="overlay">
+                <div class="nav-close" onclick="closeNav()">
+                    <i class="bi-x"></i>
                 </div>
-                <button onclick="rollDice()">Try it</button>
+
+                <nav id="menu-content">
+                    <ul>
+                        <li><a href="#roll-dice">Kocok Dadu</a></li>
+                        <li><a href="#content">Sekilas Dadu</a></li>
+                        <li><a href="#profil">Profil Diri</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div>
-                <article></article>
-            </div>
-            <aside>
-                <article></article>
+        </header>
+        <div id="roll-dice" class="generator">
+            <p>
+                Gerakkan kursor di atas dadu, atau <br />
+                klik tombol <i>Shuffle</i>
+            </p>
+            <i id="dice-face" class="bi-dice-1"></i>
+            <button onclick="rollDice()">
+                <i class="bi-shuffle"></i>
+            </button>
+        </div>
+        <main>
+            <article id="content" class="container">
+                <h1 class="container-header">Sekilas tentang Dadu</h1>
+                <p>
+                    Dadu dari bahasa Latin: datum yang berarti "diberikan atau
+                    dimainkan" adalah benda kecil yang bisa dilempar dengan sisi
+                    ditandai yang dapat memunculkan di beberapa posisi. Dadu
+                    digunakan untuk menghasilkan angka acak , biasanya sebagai
+                    bagian dari permainan meja, termasuk permainan dadu,
+                    permainan papan, permainan peran, dan permainan judi.
+                </p>
+                <p>
+                    Dadu tradisional berbentuk kubus dengan masing-masing dari
+                    enam sisinya ditandai dengan jumlah titik (pips) yang
+                    berbeda dari satu sampai enam. Saat dilempar atau dikocok,
+                    dadu berhenti dan menunjukkan bilangan bulat acak dari satu
+                    hingga enam di permukaan atasnya, dengan probabilitas
+                    masing-masing nilainya sama. Dadu mungkin juga memiliki
+                    bentuk polihedral atau tidak beraturan dan mungkin memiliki
+                    wajah yang ditandai dengan angka atau simbol, bukan pips.
+                    Dadu yang diisi pemberat dirancang untuk mengeluarkan
+                    beberapa angka khusus untuk kecurangan atau hiburan.
+                </p>
+                <section>
+                    <h2>Sejarah</h2>
+                    <p>
+                        Dadu telah digunakan sejak zaman pra-sejarah, dan tidak
+                        pasti dari mana asalnya. Ada teori bahwa dadu
+                        dikembangkan dari praktik meramal dengan talus hewan
+                        berkuku, yang dalam bahasa sehari-hari dikenal sebagai
+                        tulang jari. Senet, permainan orang Mesir Kuno,
+                        dimainkan dengan melempar papan kecil dengan dua sisi
+                        yang menunjukkan jumlah kotak berapa kali pemain bisa
+                        bergerak, dan dengan demikian berfungsi sebagai bentuk
+                        dadu. Senet dimainkan sebelum 3000 SM dan hingga abad
+                        ke-2 Masehi. Mungkin dadu tertua yang diketahui digali
+                        sebagai bagian dari permainan mirip <i>backgammon</i> di
+                        Burnt City, sebuah situs arkeologi di tenggara Iran,
+                        diperkirakan dari antara 2800 dan 2500 SM. Dadu
+                        bertulang dari Skara Brae bertanggal 3100–2400 SM.
+                        Penggalian dari kuburan di Mohenjo-daro, pemukiman
+                        peradaban Lembah Indus, menemukan dadu terakota yang
+                        berasal dari 2500–1900 SM.
+                    </p>
+                    <p>
+                        Permainan yang melibatkan dadu disebutkan dalam daftar
+                        permainan kuno India Rgveda , Atharvaveda , Mahabharata
+                        dan Buddha. Ada beberapa Alkitab referensi untuk "undi"
+                        (Ibrani : יפילו גורל yappîlū Goral), seperti dalam
+                        Mazmur 22, menunjukkan bahwa dicing (atau kegiatan yang
+                        terkait) adalah biasa ketika mazmur itu terdiri.
+                        Knucklebones adalah permainan keterampilan yang
+                        dimainkan di Yunani kuno ; bentuk turunan memiliki empat
+                        sisi tulang menerima nilai yang berbeda seperti dadu
+                        modern. Serpentinite dua puluh sisi mati dari Ptolemeus
+                        Mesir.
+                    </p>
+                    <p>
+                        Meskipun perjudian ilegal, banyak orang Romawi adalah
+                        penjudi yang bersemangat dan menikmati permainan dadu,
+                        yang dikenal sebagai aleam ludere ("bermain dadu"). Ada
+                        dua ukuran dadu Romawi. Tali adalah dadu besar
+                        bertuliskan satu, tiga, empat, dan enam di empat sisi.
+                        Tesserae adalah dadu yang lebih kecil dengan jumlah sisi
+                        dari satu sampai enam. Dadu dua sisi berasal dari abad
+                        ke-2 M dan dari Ptolemeus Mesir sedini abad ke-2 SM.
+                    </p>
+                    <p>
+                        Domino dan kartu remi berasal dari Tiongkok sebagai
+                        perkembangan dari dadu. Transisi dari dadu ke kartu remi
+                        terjadi di Cina sekitar Dinasti Tang, dan bertepatan
+                        dengan transisi teknologi dari gulungan manuskrip ke
+                        blok buku cetak. Di Jepang, dadu digunakan untuk
+                        memainkan permainan populer yang disebut sugoroku. Ada
+                        dua jenis sugoroku. Ban-sugoroku mirip dengan backgammon
+                        dan berasal dari periode Heian, sedangkan e-sugoroku
+                        adalah game balapan.
+                    </p>
+                    <p>
+                        <i>
+                            Disadur dari
+                            <a href="https://en.wikipedia.org/wiki/Dice">
+                                https://en.wikipedia.org/wiki/Dice
+                            </a>
+                        </i>
+                    </p>
+                </section>
+            </article>
+            <aside id="profil">
+                <article class="profile container">
+                    <h2 class="container-header">Profil Diri</h2>
+                    <figure>
+                        <img src="./assets/img/profile-picture.jpg" />
+                        <figcaption>Foto Profil</figcaption>
+                    </figure>
+                    <section id="social-link">
+                        <h3>Link Pribadi</h3>
+                        <p>M. Hanif Azhary</p>
+                        <div>
+                            <a href="https://github.com/nephertz">
+                                <i class="bi-github"></i>
+                            </a>
+                            <a href="https://twitter.com/nephertz">
+                                <i class="bi-twitter"></i>
+                            </a>
+                        </div>
+                    </section>
+                </article>
             </aside>
         </main>
-        <footer></footer>
-        <script src="assets/script.js"></script>
+        <footer>
+            <p>DaDar: Dadu Daring &#169; 2021, oleh M. Hanif Azhary</p>
+        </footer>
+        <script src="./assets/script.js"></script>
     </body>
 </html>
